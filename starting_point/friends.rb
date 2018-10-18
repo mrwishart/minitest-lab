@@ -40,3 +40,13 @@ def add_everyones_food(people)
 
   return everyones_food
 end
+
+def nae_mates(people)
+  no_friends = []
+  for person in people
+    if person[:friends].length == 0
+      no_friends << person
+    end
+  end
+  return no_friends
+end
