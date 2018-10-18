@@ -145,7 +145,7 @@ class TestFriends < MiniTest::Test
   # (hint: return an array, there might be more people in the future with no friends!)
 
   def test_nae_mates
-    assert_equal([@person5], nae_mates(@people))
+    assert_equal(["Daphne"], nae_mates(@people))
   end
 
 end
