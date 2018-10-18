@@ -25,3 +25,18 @@ def get_total_money(people)
   end
   return total_money
 end
+
+def transfer_money(lender, lendee, amount)
+  lender[:monies]-=amount
+  lendee[:monies]+=amount
+end
+
+def add_everyones_food(people)
+  everyones_food = []
+
+  for person in people
+    everyones_food.concat(person[:favourites][:snacks])
+  end
+
+  return everyones_food
+end
