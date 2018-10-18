@@ -17,3 +17,11 @@ end
 def remove_friend(person, friend_name)
   person[:friends].delete("Velma")
 end
+
+def get_total_money(people)
+  total_money = 0
+  for person in people
+    total_money += person[:monies]
+  end
+  return total_money
+end

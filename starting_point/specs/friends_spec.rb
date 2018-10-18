@@ -102,17 +102,21 @@ class TestFriends < MiniTest::Test
 
   # 5. For a given person, remove a specific name from their list of friends
   # (hint: Same as above, testing for the length of the array should be sufficient)
-def test_remove_friend_successfully
-  friends_before = @person4[:friends].length
-  remove_friend(@person4, "Velma")
-  friends_after = @person4[:friends].length
-  assert_equal(friends_before - 1, friends_after)
-  assert_equal(false, @person4[:friends].include?("Velma") )
-end
+  def test_remove_friend_successfully
+    friends_before = @person4[:friends].length
+    remove_friend(@person4, "Velma")
+    friends_after = @person4[:friends].length
+    assert_equal(friends_before - 1, friends_after)
+    assert_equal(false, @person4[:friends].include?("Velma") )
+  end
 
   # 6. Find the total of everyone's money
   # (hint: use the @people array, remember how we checked the total number of eggs yesterday?)
 
+  def test_get_total_money
+    total_money = get_total_money(@people)
+    assert_equal(143, total_money)
+  end
 
   # 7. For two given people, allow the first person to loan a given value of money to the other
   # (hint: our function will probably need 3 arguments passed to it... the lender, the lendee, and the amount for this function)
